@@ -95,10 +95,7 @@ export default {
     font-size: 1em;
 }
 .pressed{
-  /* background-color: black; */
-  display: block;
-  width: 135px;
-  height: 43px;
-  /* background: url(button.png) no-repeat top; */
+    box-shadow: 1px 1px 2px grey;
+    background-color: #dedede;
 }
 </style>

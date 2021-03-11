@@ -1,26 +1,26 @@
 <template>
-  <h1>This is an about page</h1>
+  <h1>Widget Examples</h1>
   <div class="examples">
-    <section>
-      <h2>Modals</h2>
-      <button @click="openModal()" class="button">
+    <section class="example" aria-labelledby="modal">
+      <h2 id="modal">Modals</h2>
+      <button @click="openModal()" class="button" id="focusHere">
         Open Modal
       </button>
       <ModalDialog />
     </section>
 
-    <section>
-      <h2>Toggle</h2>
+    <section class="example" aria-labelledby="toggle">
+      <h2 id="toggle">Toggle</h2>
       <Toggle />
     </section>
 
-    <section>
-      <h2>Accordion</h2>
+    <section class="example" aria-labelledby="accordion">
+      <h2 id="accordion">Accordion</h2>
       <Accordion />
     </section>
 
-    <section>
-      <h2>Tabs</h2>
+    <section class="example" aria-labelledby="tabs">
+      <h2 id="tabs">Tabs</h2>
       <Tabs />
     </section>
   </div>
@@ -34,7 +34,7 @@ import Accordion from "@/components/Accordion.vue";
 import Tabs from "@/components/Tabs.vue";
 
 export default {
-  name: "Home",
+  name: "Examples",
   components: {
     ModalDialog,
     Toggle,
@@ -52,6 +52,9 @@ export default {
   text-align: left;
   max-width: 600px;
   margin: auto;
+}
+.example{
+  margin: 50px auto;
 }
 .button{
     border: 1px solid gray;

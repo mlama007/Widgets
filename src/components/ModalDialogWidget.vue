@@ -21,9 +21,16 @@
           >
             X
           </button>
-          <h2 id="modalHeading">Modal Example</h2>
 
-          <button class="button" ref="last" @click="closeModal()">Confirm</button>
+          <span id="modalHeading">
+            <slot name="header">Title</slot>
+          </span>
+
+          <slot></slot>
+
+          <button class="button" ref="last" @click="closeModal()">
+            <slot name="lastButton">Close</slot>
+          </button>
 
           <!-- Focus Guard -->
           <div id="focusGuardEnd" tabindex="0" @focus="focusOnFirst"></div>
@@ -104,7 +111,6 @@ export default {
   font-size: 16px;
   cursor: pointer;
 }
-
 
 #focusguard-1,
 #focusguard-2 {
