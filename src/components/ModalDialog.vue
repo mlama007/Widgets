@@ -23,7 +23,7 @@
           </button>
           <h2 id="modalHeading">Modal Example</h2>
 
-          <button ref="last">nothing</button>
+          <button class="button" ref="last" @click="closeModal()">Confirm</button>
 
           <!-- Focus Guard -->
           <div id="focusGuardEnd" tabindex="0" @focus="focusOnFirst"></div>

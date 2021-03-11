@@ -1,46 +1,63 @@
 <template>
   <h1>This is an about page</h1>
+  <div class="examples">
+    <section>
+      <h2>Modals</h2>
+      <button @click="openModal()" class="button">
+        Open Modal
+      </button>
+      <ModalDialog />
+    </section>
 
-  <!-- <section>
-    <h2>Modals</h2>
-    <button @click="openModal()" class="addNew" id="addNew">Open Modal</button>
-    <ModalDialog />
-  </section>
+    <section>
+      <h2>Toggle</h2>
+      <Toggle />
+    </section>
 
-  <section>
-    <h2>Toggle</h2>
-    <Toggle />
-  </section> -->
+    <section>
+      <h2>Accordion</h2>
+      <Accordion />
+    </section>
 
-  <section>
-    <h2>Accordion</h2>
-    <Accordion />
-  </section>
-
-  <section>
-    <h2>Tabs</h2>
-    <Tabs />
-  </section>
+    <section>
+      <h2>Tabs</h2>
+      <Tabs />
+    </section>
+  </div>
 </template>
 
 <script>
 import { mapActions } from "vuex";
-// import ModalDialog from '@/components/ModalDialog.vue'
-// import Toggle from '@/components/Toggle.vue'
-import Accordion from '@/components/Accordion.vue'
-import Tabs from '@/components/Tabs.vue'
-
+import ModalDialog from "@/components/ModalDialog.vue";
+import Toggle from "@/components/Toggle.vue";
+import Accordion from "@/components/Accordion.vue";
+import Tabs from "@/components/Tabs.vue";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    // ModalDialog,
-    // Toggle,
+    ModalDialog,
+    Toggle,
     Accordion,
-    Tabs
+    Tabs,
   },
   methods: {
-    ...mapActions(["openModal"])
-  }
-}
+    ...mapActions(["openModal"]),
+  },
+};
 </script>
+
+<style>
+.examples {
+  text-align: left;
+  max-width: 600px;
+  margin: auto;
+}
+.button{
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 5px 10px;
+    font-size: 1em;
+}
+</style>
