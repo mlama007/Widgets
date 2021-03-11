@@ -75,12 +75,11 @@ export default {
 
 <style>
 .accordions {
-  background: #fff;
-  border-radius: 3px;
-  box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 2px 4px rgb(0 0 0 / 4%);
-  text-align: left;
-  max-width: 700px;
-  margin: 0 auto;
+    background: #fff;
+    text-align: left;
+    max-width: 650px;
+    border: 1px solid lightgray;
+    margin: 0 auto;
 }
 .accordionHeading {
   color: #333;
@@ -96,7 +95,6 @@ export default {
   width: 100%;
   font-size: 1em;
   text-align: left;
-  text-decoration: none;
 }
 
 .accordion-panel {
